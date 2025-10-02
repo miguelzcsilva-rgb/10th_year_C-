@@ -1,0 +1,10 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+int main(){double n1;std::cout << "escreva um numero";std::cin >> n1;    if (n1 > 0) {    std::cout << "é positivo";    }else {std::cout << "é negativo";    }return 0;}
