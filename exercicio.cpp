@@ -1,14 +1,19 @@
-#include<iostream>
+#include <iostream>
+#include <locale.h>
+using namespace std;
 int main()
 {
-	int n1;
-	do {
-		std::cout << "escreve um numero";
-			std::cin >> n1;
-			if (n1 % 2 == 0)
-				std::cout << "este e um numero par ";
-			else {
-				std::cout << "este numero e impar";	}
-	} while (n1 !=0);
-	return(0);
+	setlocale(LC_ALL, "Portuguese");
+	int i, n1, soma, n2;
+	soma = 0;
+	cout << "quantos numeros queres somar";
+	cin >> n1;
+	for (i = 1; i<=n1; i++) {
+		cout << "quais numeros queres somar";
+		cin >> n2;
+		soma = soma + n2;
+
+	}
+	cout << "o valor soamdos são equivalentes a" << soma << ".";
+	return 0;
 }
