@@ -14,6 +14,6 @@ int main()
 		soma = soma + n2;
 
 	}
-	cout << "o valor soamdos são equivalentes a" << soma << ".";
+	cout << "o valor soamdos sÃ£o equivalentes a" << soma << ".";
 	return 0;
 }
