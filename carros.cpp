@@ -14,6 +14,7 @@ int main()
 		if (r < 0 || r>2)
 			cout << "es parvo boy";
 		else{
+			cout << "a materia q escolheste foi " << carros[r] << ".\n";
 			cout << "queres sair do programa";
 			cin >> sair;
 		}
