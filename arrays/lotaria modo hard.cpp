@@ -16,11 +16,11 @@ int main()
 	}
 	for (i = 0; i < 5; i++) {
 
-		cout << "escreva o " << i + 1 << "º numero da sua chave \n";
+		cout << "escreva o " << i + 1 << "Âº numero da sua chave \n";
 		cin >> utilizador[i];
 		if (utilizador[i] <= 0 || utilizador[i] > 50) {
 			i--;
-			cout << "boy tu és estupido ou o q, é um numero entre 1 e 50\n";
+			cout << "boy tu Ã©s estupido ou o q, Ã© um numero entre 1 e 50\n";
 		}
 	}
 	do {
@@ -41,9 +41,14 @@ int main()
 		if (utilizador[i] == num[i]) {
 			acerto++;
 		}
+		
+		}
+		if (utilizador[i] == num[i]) {
+			acerto++;
+		}
 		if (acerto == 5) {
 
-			cout << "parabens recebeste 1 trilhão de dogecoins";
+			cout << "parabens recebeste 1 trilhÃ£o de dogecoins";
 
 		}
 		else {
@@ -52,7 +57,6 @@ int main()
 			for (i = 0; i < 5; i++) {
 				cout <<"os numeros que te sairam foram "<<num[i] << "\n";
 			}
-		}
 		return 0;
 	}
 }
