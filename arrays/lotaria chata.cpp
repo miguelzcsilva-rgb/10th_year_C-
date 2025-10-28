@@ -14,7 +14,7 @@ int main()
 		conta = 0;
 		for (i = 0; i < 5; i++) {
 
-			num[i] = rand() % 5 + 1;
+			num[i] = rand() % 49 + 1;
 			for (j = 0; j < i; j++) {
 				if (num[j] == num[i]) {
 					conta++;
