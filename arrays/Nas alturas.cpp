@@ -13,9 +13,9 @@ int main()
 	float media = 0, altura[30];
 	for (i = 0; i < 30; i++)
 	{
-		cout << "Qual é a idade da " << i+1 <<"ª criança\n";
+		cout << "Qual Ã© a idade da " << i+1 <<"Âª crianÃ§a\n";
 		cin >> idade[i];
-		cout << "Qual é a ALTURA da"<< i+1 <<"ª criança\n";
+		cout << "Qual Ã© a ALTURA da"<< i+1 <<"Âª crianÃ§a\n";
 		cin >> altura[i];
 		contador++;
 		media = media + altura[i];
@@ -23,7 +23,7 @@ int main()
 		//cout << "contador: " << contador << "\n";
 	}
 	media = media / contador;
-	cout << "a media das alturas é" << media<<"/n";
+	cout << "a media das alturas Ã©" << media<<"/n";
 	for (i = 0; i < 30; i++)
 	{
 		if (idade[i] > 13 &&altura[i] < media)
@@ -32,6 +32,6 @@ int main()
 			//cout << "contaidade: " << contaidade << "\n";
 		}
 	}
-	cout << "a crianças com menos de 13 anos com altura menor q a media são:\n" << contaidade;
+	cout << "a crianÃ§as com menos de 13 anos com altura menor q a media sÃ£o:\n" << contaidade;
 	return 0;
 }
