@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <locale.h>
+#include <cstdlib>
+#include <time.h>
+using namespace std;
+int main()
+{
+    string nome[5];
+    char alg;
+    int i;
+    do {
+for( i=0;i<5;i++){
+cout<<"escrve o "<<i+1<<"º nome:";
+cin>>nome[i];
+}
+for( i=4;i>=0;i--){
+cout<<nome[i]<<"\n" ;
+}
+cout<<"queres sair ";
+cin>>alg;
+}while(alg!='s');
+ 
+    return 0;
+}
