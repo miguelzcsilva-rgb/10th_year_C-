@@ -1,0 +1,92 @@
+#include <iostream>
+#include <string>
+#include <locale.h>
+#include <cstdlib>
+#include <time.h>
+using namespace std;
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define CYAN    "\033[36m"
+
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	srand(time(0));
+	string meses[12] = { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho","Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" };
+	string legumes[12] = { "Batatas", "Cenouras", "Couves", "Alfaces", "Brócolos" };
+	int i, j, produtop[5][12], op, total = 0, key = 0;
+	do {
+		system("cls");
+		cout << CYAN << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+		cout << "[1] calcular totais mensais\n";
+		cout << "[2] calcular totais por produto\n";
+		cout << "[3] inserir valores\n";
+		cout << "[0] sair\n";
+		cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+		cout << "qual das operações desejas realizar\n";
+		cin >> op;
+		system("cls");
+
+		switch (op) {
+		case 1:
+			if (key == 0) {
+				cout << "Primeiro insira os valores dos produtos gastos no inserir valores\n";
+				cin.ignore();
+				cin.get();
+				break;
+			}
+
+			for (j = 0; j < 12; j++) {
+				total = 0;
+				for (i = 0; i < 5; i++) {
+
+					total += produtop[i][j];
+
+				}
+				cout << "O total de produtos gastos no mês de " << meses[j] << " foi de: " << total << " unidades\n";
+			}
+			cin.ignore();
+			cin.get();
+			break;
+		case 2:
+			if (key == 0) {
+				cout << "Primeiro insira os valores dos produtos gastos no inserir valores\n";
+				cin.ignore();
+				cin.get();
+				break;}
+			
+			for (j = 0; j < 5; j++) {
+				total = 0;
+				for (i = 0; i < 12; i++) {
+
+					total += produtop[j][i];
+
+				}
+				cout << "A quantidade de  " << legumes[j] << " gastos este ano  foi de: " << total << " unidades\n";
+			}
+			cin.ignore();
+			cin.get();
+			break;
+		case 3:
+
+			for (i = 0; i < 5; i++) {
+				cout << "Insira a quantidade de produtos gastos " << legumes[i] << " separados por um espaço:\n";
+				for (j = 0; j < 12; j++) {
+					cin >> produtop[i][j];
+				}
+			}
+			key = 1;
+			break;
+		case 0:
+			cout << "A sair do programa...\n";
+			break;
+		}
+
+
+	} while (op != 0);
+	return 0;
+}

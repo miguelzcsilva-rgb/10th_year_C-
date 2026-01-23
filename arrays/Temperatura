@@ -1,0 +1,27 @@
+	setlocale(LC_ALL, "Portuguese");
+	srand(time(0));
+	int i, temp[12], media=0,save=0;
+	string meses[12] = {
+	"janeiro", "fevereiro", "março", "abril", "maio", "junho",
+	"julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+	};
+	for (i = 0; i < 12;i++) {
+		cout << "escreve a temperatura no mes de " << meses[i] << ":\n";
+		cin >> temp[i];
+		media = media + temp[i];
+	}
+	media = media / 12;
+	for (i = 0; i < 12; i++) {
+		if(temp[i] < media){
+			cout << "o mes de" << meses[i] << "teve maior temperatura  q a media anual \n";
+		}
+		if (save < temp[i]) {
+			save = temp[i];
+
+
+		}
+
+	}
+	cout << "a maior temperatura foi de: " << save<<endl;
+	return 0;
+}
