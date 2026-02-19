@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+#include <locale.h>
+#include <cstdlib>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	long long somapares = 0 ,somaimpares=0,impares1=0, impares = 0,pares=0,pares1=0;
+	int numerodecartas,numerodacarta;
+
+	cin >> numerodecartas;
+
+	for (int i = 0; i < numerodecartas; i++) {
+		cin >> numerodacarta;
+		if (numerodacarta % 2 == 0) {
+			pares++;
+		}
+		if (numerodacarta % 2 != 0) {
+			impares++;
+			
+		}
+	}
+
+	cin >> numerodecartas;
+
+	for (int i = 0; i < numerodecartas;i++) {
+		cin >> numerodacarta;
+	if(numerodacarta%2==0){
+		pares1++;
+	}
+	if (numerodacarta % 2 != 0) {
+		  impares1++;
+		}
+	}
+
+
+	somapares = pares1 * pares +impares * impares1;
+	somaimpares = pares1 * impares + impares1*pares;
+
+	cout << somapares << " " << somaimpares << endl;
+
+
+
+
+
+
+	return 0;
+}
